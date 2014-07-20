@@ -20,9 +20,9 @@
 (defn move [obj axis dir]
   (assoc
       (dissoc obj axis)
-    axis (if (= dir :pos)
-           (+ (axis obj) 1)
-           (- (axis obj) 1))))
+      axis (if (= dir :pos)
+             (+ (axis obj) 1)
+             (- (axis obj) 1))))
 
 (defn draw [obj]
   (let [{:keys [x y col w h]} obj]
