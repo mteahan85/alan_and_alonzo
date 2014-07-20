@@ -13,15 +13,23 @@
 (def rect
   {:x 25
    :y 25
-   :color "ee0000"
-   :width 50
-   :height 50})
+   :col "ee0000"
+   :w 50
+   :h 50})
+
+(defn move [obj axis dir]
+  (assoc
+      (dissoc obj axis)
+    axis (if (= dir :pos)
+           (+ (axis obj) 1)
+           (- (axis obj) 1))))
 
 (defn draw [obj]
-  (dom/set-attrs! canvas {:width 640
-                          :height 480})
-  (set! (.-fillStyle ctx) (:color obj))
-  (.fillRect ctx (:x obj) (:y obj) (:width obj) (:height obj)))
+  (let [{:keys [x y col w h]} obj]
+    (dom/set-attrs! canvas {:width 400
+                            :height 300})
+    (set! (.-fillStyle ctx) col)
+    (.fillRect ctx x y w h)))
 
 (defn image
   [src]

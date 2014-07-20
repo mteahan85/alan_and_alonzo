@@ -1,8 +1,0 @@
-(def m {:a 1 :b 2})
-(:a m)
-([:a :b] m)
-(1 m)
-(:a :b m)
-(def m {:a 1 :b 2 :c 3})
-(:a :b m)
-(:a m)

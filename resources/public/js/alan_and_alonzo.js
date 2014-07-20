@@ -35529,11 +35529,24 @@ goog.require("domina");
 goog.require("domina");
 alan_and_alonzo.client.canvas = domina.by_id.call(null, "foreground");
 alan_and_alonzo.client.ctx = alan_and_alonzo.client.canvas.getContext("2d");
-alan_and_alonzo.client.rect = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "x", "x", 1013904362), 25, new cljs.core.Keyword(null, "y", "y", 1013904363), 25, new cljs.core.Keyword(null, "color", "color", 1108746965), "ee0000", new cljs.core.Keyword(null, "width", "width", 1127031096), 50, new cljs.core.Keyword(null, "height", "height", 4087841945), 50], null);
+alan_and_alonzo.client.rect = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "x", "x", 1013904362), 25, new cljs.core.Keyword(null, "y", "y", 1013904363), 25, new cljs.core.Keyword(null, "col", "col", 1014002930), "ee0000", new cljs.core.Keyword(null, "w", "w", 1013904361), 50, new cljs.core.Keyword(null, "h", "h", 1013904346), 50], null);
 alan_and_alonzo.client.draw = function draw(obj) {
+<<<<<<< HEAD
   domina.set_attrs_BANG_.call(null, alan_and_alonzo.client.canvas, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "width", "width", 1127031096), "640", new cljs.core.Keyword(null, "height", "height", 4087841945), "480"], null));
   alan_and_alonzo.client.ctx.fillStyle = (new cljs.core.Keyword(null, "color", "color", 1108746965)).cljs$core$IFn$_invoke$arity$1(obj);
   return alan_and_alonzo.client.ctx.fillRect((new cljs.core.Keyword(null, "x", "x", 1013904362)).cljs$core$IFn$_invoke$arity$1(obj), (new cljs.core.Keyword(null, "y", "y", 1013904363)).cljs$core$IFn$_invoke$arity$1(obj), (new cljs.core.Keyword(null, "width", "width", 1127031096)).cljs$core$IFn$_invoke$arity$1(obj), (new cljs.core.Keyword(null, "height", "height", 4087841945)).cljs$core$IFn$_invoke$arity$1(obj))
+=======
+  var map__12426 = obj;
+  var map__12426__$1 = cljs.core.seq_QMARK_.call(null, map__12426) ? cljs.core.apply.call(null, cljs.core.hash_map, map__12426) : map__12426;
+  var h = cljs.core.get.call(null, map__12426__$1, new cljs.core.Keyword(null, "h", "h", 1013904346));
+  var w = cljs.core.get.call(null, map__12426__$1, new cljs.core.Keyword(null, "w", "w", 1013904361));
+  var col = cljs.core.get.call(null, map__12426__$1, new cljs.core.Keyword(null, "col", "col", 1014002930));
+  var y = cljs.core.get.call(null, map__12426__$1, new cljs.core.Keyword(null, "y", "y", 1013904363));
+  var x = cljs.core.get.call(null, map__12426__$1, new cljs.core.Keyword(null, "x", "x", 1013904362));
+  domina.set_attrs_BANG_.call(null, alan_and_alonzo.client.canvas, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "width", "width", 1127031096), 400, new cljs.core.Keyword(null, "height", "height", 4087841945), 300], null));
+  alan_and_alonzo.client.ctx.fillStyle = col;
+  return alan_and_alonzo.client.ctx.fillRect(x, y, w, h)
+>>>>>>> 2d1efb1dfefb9611c8a88f2019957ae753278140
 };
 alan_and_alonzo.client.image = function image(src) {
   var img = new Image;
