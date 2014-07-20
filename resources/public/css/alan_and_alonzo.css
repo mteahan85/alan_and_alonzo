@@ -1,0 +1,11 @@
+#game-window {
+    height:400px; width:600px;
+    border:1px solid #000000;
+    position:relative;
+}
+
+.layer {
+    height:400px; width:600px;
+    position:absolute;
+    top:0px; left:0px;
+}

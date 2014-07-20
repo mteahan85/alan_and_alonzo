@@ -3,9 +3,18 @@
     <head lang="en">
         <meta charset="UTF-8">
         <title>Alan & Alonzo</title>
+	<link type="text/css" href="css/alan_and_alonzo.css" rel="stylesheet"></script>
     </head>
     <body>
-        <canvas id="foreground"></canvas>
+
+      <div id="game-window">
+        <canvas id="background" class="layer"></canvas>
+        <canvas id="objects" class="layer"></canvas>
+	<canvas id="enemies class="layer""></canvas>
+	<canvas id="player" class="layer"></canvas>
+        <canvas id="foreground" class="layer"></canvas>
+      </div>
+      
         <script src="../js/alan_and_alonzo.js"></script>
         <script type="text/javascript">
             window.onload=function(){
